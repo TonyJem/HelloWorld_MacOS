@@ -706,17 +706,17 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="HelloWorld" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="513" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="811" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="23" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q65-4E-Hy5">
-                                <rect key="frame" x="20" y="171" width="473" height="79"/>
+                                <rect key="frame" x="20" y="171" width="771" height="79"/>
                                 <subviews>
-                                    <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="60" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eq3-Tx-U76">
-                                        <rect key="frame" x="0.0" y="58" width="473" height="21"/>
+                                    <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="15" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eq3-Tx-U76">
+                                        <rect key="frame" x="0.0" y="58" width="771" height="21"/>
                                         <subviews>
                                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0KD-ql-lzj">
-                                                <rect key="frame" x="0.0" y="0.0" width="313" height="21"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="581" height="21"/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Enter your name here..." drawsBackground="YES" id="c6v-L4-a6O">
                                                     <font key="font" metaFont="system"/>
                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -724,24 +724,39 @@
                                                 </textFieldCell>
                                             </textField>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Gbh-hM-aH5">
-                                                <rect key="frame" x="367" y="-7" width="112" height="32"/>
+                                                <rect key="frame" x="590" y="-7" width="112" height="32"/>
                                                 <buttonCell key="cell" type="push" title="Say &quot;Hello!&quot;" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Lbm-bO-KUl">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="sayButtonClicked:" target="XfG-lQ-9wD" id="6sA-N6-3EF"/>
+                                                </connections>
+                                            </button>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1Tg-hJ-i0X">
+                                                <rect key="frame" x="705" y="-7" width="72" height="32"/>
+                                                <buttonCell key="cell" type="push" title="Clear" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="9aI-0q-N9t">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="clearButtonClicked:" target="XfG-lQ-9wD" id="nmY-7q-1Qb"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <visibilityPriorities>
+                                            <integer value="1000"/>
                                             <integer value="1000"/>
                                             <integer value="1000"/>
                                         </visibilityPriorities>
                                         <customSpacing>
                                             <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
                                         </customSpacing>
                                     </stackView>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gVz-Qs-a2P">
-                                        <rect key="frame" x="-2" y="0.0" width="477" height="35"/>
+                                        <rect key="frame" x="-2" y="0.0" width="775" height="35"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Label" id="PUb-RW-Fi3">
                                             <font key="font" metaFont="system" size="30"/>
                                             <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -771,10 +786,14 @@
                             <constraint firstItem="Q65-4E-Hy5" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="OgK-vR-OnK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="helloLabel" destination="gVz-Qs-a2P" id="2MW-Xx-tOE"/>
+                        <outlet property="nameField" destination="0KD-ql-lzj" id="l13-wq-edq"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="76" y="668"/>
         </scene>
     </scenes>
 </document>
